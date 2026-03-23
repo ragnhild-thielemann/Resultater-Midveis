@@ -58,5 +58,10 @@ Når vi skal finne medainen, finner vi antall elementer i listen over resulater,
 
 ## Standarisere til prosentiler, og sammenligne
 
-Det siste vi gjør, er å sammenligne andelen korrekt (der 1 tilsvarer 100% riktig på midtveiseksamen). 
+Ved å bruke percentiler sammenligner vi studentenes relative plassering i resultatfordelingen, i stedet for rå poeng. For eksempel betyr 50-percentilen at man ligger midt i fordelingen, mens 90-percentilen tilsvarer de beste 10 %.
 
+Dette gjør fagene sammenlignbare fordi percentiler ikke påvirkes av hvor mange studenter som har tatt eksamen eller hvor mange poeng det er mulig å få (Da fagene hadde henholsvis 15,17 og 20 poeng som full score). En gitt percentil representerer samme prestasjonsnivå uavhengig av fag. Dermed kan man sammenligne resultater på en rettferdig måte, selv om eksamenene har ulik lengde. Plottet viser at for alle murlige percentiler, så ligger resulatene fra STK1100 vesetnlig lavere. 
+
+![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/japp.png)
+
+### Peace out
