@@ -11,9 +11,9 @@ Det første vi gjør, er å legge resultatene i en fil, slik at vi kan behandle 
 
 
 
-#### Median, varians og gjennomsnitt
+### Median, varians og gjennomsnitt
 ##### Gjennomsnitt
-Vi beregner den empiriske forveningsverdien ved å bruke utrykket for forveningsverdi:
+Vi beregner den empiriske forveningsverdien ved å bruke utrykket for empirisk forveningsverdi, ved å summere over poengsummene gitt ved $x_i$:
 
 
 $$
@@ -21,13 +21,13 @@ $$
 $$ 
 
 
-Altså ved å summere de ulike verdiene for poengsummen ved midtveis, gitt som $x_{i}$ 
 
-Når vi gjør dette for verdiene i listen, får vi at **Forventingsverdeien er 12.24 poeng**
+
+Når vi gjør dette for verdiene i dataettet, får vi at **Forventingsverdeien er 12.24 poeng** . Forventet antall poeng for en tilfeldig valgt student er altså litt over halvparten riktige svar.
 
 ##### Varians
 
-Vi beregner variansen ved å bruke utrykket for varians
+Vi beregner variansen ved å bruke utrykket for empirisk varians for poengsummene $x_i$
 
 
 $$
@@ -35,14 +35,24 @@ $$
 $$ 
 
 
-**Dette gir en varians på 15.9** , som forteller oss at spredningen i resulatentene er veldig stor. 
+**Dette gir en varians på 15.9** , som forteller oss at spredningen i resulatentene fra midtveis er veldig stor. 
 
 ##### Median
 
-Når vi skal finne medainen, finner vi antall elementer i listen over resulater, og printer a[ $\frac{n}{2}$ ], som er den poengsummen der halvparten av studentene ligger over, mens halvparten av studentene ligger under. Median er det samme som 0.5-prosentilen. 
+Når vi skal finne medainen, finner vi antall elementer i listen over resulater, og printer a[ $\frac{n}{2}$ ], som er den poengsummen der halvparten av studentene ligger over, mens halvparten av studentene ligger under. Median er det samme som 0.5-prosentilen. Utregningen fra scriptet viser at **Medianen ligger på 12 poeng** . 
+
+### Normalfordeling
+
+Vi lager et q-q-plott for å se om poengene fra midtveis kan tilnærmes med en normalfordeling. Vi finner prosnetilene til den sorterte listen **a** , ved formelen 
 
 
+$$
+p_i = \frac{i-0.5}{n} $$
 
+
+Dette gir følgene q-q-plot:
+
+Vi ser at punktene ligger tilnærmet langs en rett linje for verdiene i midten, noe som tyder på at poengsummene rundt forventningsverdien kan antas å være tilnærmet normalfordelte. Vi har imidlertid beregnet et relativt høyt variansnivå, $\sigma^2 = 15,9$, som innebærer at den tilhørende normalfordelingen vil ha stor spredning. Dette betyr at verdiene er ganske varierte, og at avvikene fra forventningsverdien på 12.24 poeng kan være store.
 
 
 

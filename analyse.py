@@ -2,8 +2,10 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.stats import norm
+
 a = []
-with open("fil.txt","r") as fil:
+with open("fil_STK.txt","r") as fil:
     for linje in fil:
         verdier = linje.split()
         a.append(int(verdier[1]))
@@ -31,3 +33,20 @@ plt.xlabel("Antall poeng")
 plt.ylabel("Sansynlighet for poengsummen")
 plt.title("Sansynlighetsfordeling for poengsummene")
 plt.show()
+
+#q-q-plot
+
+p_verdier = []
+z_verdier = []
+for i in range(1,len(a)+1):
+    p = (i-0.5)/(len(a))
+    p_verdier.append(p)
+    z = norm.ppf(p)
+    z_verdier.append(z)
+
+plt.plot(a,z_verdier,".",color = "hotpink")
+plt.xlabel("Reele verdier")
+plt.ylabel("z-prosentiler")
+plt.title("Q-Q-plot")
+plt.grid()
+
