@@ -1,60 +1,59 @@
 # Resultater fra Midveis STK1100 - 2026
 
-Resultatene fra Midtveiseksamen i STK1100 for 2026 har kommet, så jeg syntes det er gøy å se litt på tallene, og hva det kan si om hvordan det går i emnet for den jevne student. 
+Utgangspunktet for denne analysen er at på tbaneturen på vei hjem, var mange misfornøyde med midtveis i STK1100. Vi var av den oppfatning at den var vesetnlig vaskskligere enn andre midtveiseksamner, så jeg bestemte meg for å se på dataene, og se om dette stemmer. Jeg sammenligner resulatene fra midtveiseksamen i STK1100 fra 2026, MAT1100 fra 2026 og MAT1105 fra 2025.
+
+### Om de ulike emnene
+
+For å forkare utslagene i datasettene, er det viktig med innsikt i hvem som tar de ulike emnene. MAT1100 er grunnkurs i matematikk, for både fysikere og matematikere. Mye av stoffet i dette kurset er kjent for dem som studerer matematikk, som forklarer den høye andelen som fikk tilnærmet full pott. Dette ga en positivt skjev fordeling, med en vesentlig høyere forventingsverdi enn median. 
+
+Derfor er det mer informativt å sammenligne resulatene med MAT1105 fra 2025, som var et kurs utelukkende for dem som studerer matematikk. Dette vil gi oss et inblikk i hvordan de samme studentene gjør det i to ulike emner.  
+
 
 #### Behandle data
-Det første vi gjør, er å legge resultatene i en fil, slik at vi kan behandle dataen. Deretter leser vi ut resulatene, som legges i en array **a** . Deretter plotter vi dette i et histogram, først et histogram som beskriver den nomenielle fordelingen av antall studenter per poengsum, og deretter en sansynlighetsfordeling for de ulike poengsummene, gitt som figur 1 og figur 2. 
+Det første vi gjør, er å legge resultatene i en fil, slik at vi kan behandle dataen. Deretter leser vi ut resulatene, som legges i en array **a** . Deretter plotter vi dette i et histogram, først et histogram som beskriver den nomenielle fordelingen av antall studenter per poengsum. Histogrammene for de ulike emnene er plottet nedenfor. 
+
+![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/MAT1100.png)
+
+I resulatene fra MAT1100 ser vi at det er en positiv skjev fordeling. Den høye søylen med full pott kan antas å være matematikkstudenetene, som har var gjennom store deler av pensumet til midtveis i høst. Forventet score på 69% er derfor lite informativ. 
 
 ![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/nominell.png)
 
-![ja](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/sansynlighet.png)
+For STK1100 ser vi at poengscoren er nærmere normalfordelt. 
+
+![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/MAT1105.png)
+
+For MAT1105 ser vi at det er en postiv skjev fordeling, men nærmere en normalfordeling enn det MAT1100 er. 
 
 
 
-### Median, varians og gjennomsnitt
-##### Gjennomsnitt
-Vi beregner den empiriske forveningsverdien ved å bruke utrykket for empirisk forveningsverdi, ved å summere over poengsummene gitt ved $x_i$:
+### Median, varians og forveningsverdei
+##### Forveningsverdi
+Vi beregner den empiriske forveningsverdien ved å bruke utrykket for empirisk forveningsverdi, ved å summere over poengsummene gitt ved $x_i$ for både MAT1100 og STK1100. Da det var 15 oppgaver på MAT1100 og 20 på STK1100, gir målet om gjennomsnittlig prosentvis score mer mening som et mål. Begge regnes med formelen
 
 
 $$
-\mu_{empirisk} = \frac{1}{n} \sum_{i=1}^{n} x_{i} 
+\mu_{gjennomsnitt} = \frac{1}{n} \sum_{i=1}^{n} x_{i} 
 $$ 
 
 
 
-
-Når vi gjør dette for verdiene i dataettet, får vi at **Forventingsverdeien er 12.24 poeng** . Forventet antall poeng for en tilfeldig valgt student er altså litt over halvparten riktige svar.
+Når vi gjør dette for verdiene i dataettet, får vi at **Forventingsverdeien er 69% riktig på MAT1100 og 61 % riktig på STK1100 og 72% rett på MAT1105** . Da fokuset er på endringen fra MAT1105 til STK1100, ser vi at forveningsverdien har falt med 10 prosentpoeng. 
 
 ##### Varians
 
-Vi beregner variansen ved å bruke utrykket for empirisk varians for poengsummene $x_i$
+Vi beregner variansen ved å bruke utrykket for empirisk varians for andelen riktige poeng ved de ulike midtveiseksamnene. 
 
 
 $$
-\sigma_{empirisk}^2 = \frac{1}{n} \sum_{i=1}^{n} (x_{i} -\mu_{empirisk})^2
+\sigma_{empirisk}^2 = \frac{1}{n^2} \sum_{i=1}^{n} (x_{i}/{n} -\mu_{forvenitning})^2
 $$ 
 
 
-**Dette gir en varians på 15.9** , som forteller oss at spredningen i resulatentene fra midtveis er veldig stor. 
+**Dette gir en varians på 0.04 for STK1100, 0.06 for MAT1100 og 0.04 for MAT1105.** . Dette resulatet passer med forvenintngen om at todelingen av studentene i MAT1100, mellom fysikere og matematikere gir stor sprening i resulatene til midtveis.
 
 ##### Median
 
-Når vi skal finne medainen, finner vi antall elementer i listen over resulater, og printer a[ $\frac{n}{2}$ ], som er den poengsummen der halvparten av studentene ligger over, mens halvparten av studentene ligger under. Median er det samme som 0.5-prosentilen. Utregningen fra scriptet viser at **Medianen ligger på 12 poeng** . 
-
-### Normalfordeling
-
-Vi lager et q-q-plott for å se om poengene fra midtveis kan tilnærmes med en normalfordeling. Vi finner prosnetilene til den sorterte listen **a** , ved formelen 
-
-
-$$
-p_i = \frac{i-0.5}{n} $$
-
-
-Dette gir følgene q-q-plot:
-
-![ja](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/qq.png)
-
-Vi ser at punktene ligger tilnærmet langs en rett linje for verdiene i midten, noe som tyder på at poengsummene rundt forventningsverdien kan antas å være tilnærmet normalfordelte. Vi har imidlertid beregnet et relativt høyt variansnivå, $\sigma^2 = 15,9$, som innebærer at den tilhørende normalfordelingen vil ha stor spredning. Dette betyr at verdiene er ganske varierte, og at avvikene fra forventningsverdien på 12.24 poeng kan være store.
+Når vi skal finne medainen, finner vi antall elementer i listen over resulater, og printer a[ $\frac{n}{2}$ ], som er den poengsummen der halvparten av studentene ligger over, mens halvparten av studentene ligger under. Median er det samme som 0.5-prosentilen. Utregningen fra scriptet viser at **For de ulike fagene MAT1105, MAT1100 og STK1100 er medianene henholsvis 76% rikig, 73% riktig og 60% riktig** . 
 
 
 
