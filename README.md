@@ -12,15 +12,16 @@ Derfor er det mer informativt å sammenligne resulatene med MAT1105 fra 2025, so
 #### Behandle data
 Det første vi gjør, er å legge resultatene i en fil, slik at vi kan behandle dataen. Deretter leser vi ut resulatene, som legges i en array **a** . Deretter plotter vi dette i et histogram, først et histogram som beskriver den nomenielle fordelingen av antall studenter per poengsum. Histogrammene for de ulike emnene er plottet nedenfor. 
 
-![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/MAT1100.png)
+## MAT1100
+![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/1100.png)
 
-I resulatene fra MAT1100 ser vi at det er en positiv skjev fordeling. Den høye søylen med full pott kan antas å være matematikkstudenetene, som har var gjennom store deler av pensumet til midtveis i høst. Forventet score på 69% er derfor lite informativ. 
-
+I resulatene fra MAT1100 ser vi at det er en positiv skjev fordeling. Den høye søylen med full pott kan antas å være matematikkstudenetene, som har var gjennom store deler av pensumet til midtveis i høst. Forventet score på 69% er derfor lite informativ for hvordan det går med matematikkstudentene. Medianen er på 73%, så dette er en positivt skjev fordeling (grunnet de gode resulatne fra matematikkstudentene)
+## STK1100
 ![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/nominell.png)
 
-For STK1100 ser vi at poengscoren er nærmere normalfordelt. 
-
-![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/MAT1105.png)
+For STK1100 ser vi at poengscoren er nærmere normalfordelt. Her er det en forvendingsverdi på 61% korrekt, med en median på 60% korrekt. 
+## MAT1105
+![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/1105.png)
 
 For MAT1105 ser vi at det er en postiv skjev fordeling, men nærmere en normalfordeling enn det MAT1100 er. 
 
@@ -45,7 +46,7 @@ Vi beregner variansen ved å bruke utrykket for empirisk varians for andelen rik
 
 
 $$
-\sigma_{empirisk}^2 = \frac{1}{n^2} \sum_{i=1}^{n} (x_{i}/{n} -\mu_{forvenitning})^2
+\sigma_{empirisk}^2 = \frac{1}{n^2} \sum_{i=1}^{n} (\frac{x_{i}}{n} -\mu_{forvenitning})^2
 $$ 
 
 
@@ -55,5 +56,7 @@ $$
 
 Når vi skal finne medainen, finner vi antall elementer i listen over resulater, og printer a[ $\frac{n}{2}$ ], som er den poengsummen der halvparten av studentene ligger over, mens halvparten av studentene ligger under. Median er det samme som 0.5-prosentilen. Utregningen fra scriptet viser at **For de ulike fagene MAT1105, MAT1100 og STK1100 er medianene henholsvis 76% rikig, 73% riktig og 60% riktig** . 
 
+## Standarisere til prosentiler, og sammenligne
 
+Det siste vi gjør, er å sammenligne andelen korrekt (der 1 tilsvarer 100% riktig på midtveiseksamen). 
 
