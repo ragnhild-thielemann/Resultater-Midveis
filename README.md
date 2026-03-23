@@ -52,6 +52,8 @@ p_i = \frac{i-0.5}{n} $$
 
 Dette gir følgene q-q-plot:
 
+![ja](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/qq.png)
+
 Vi ser at punktene ligger tilnærmet langs en rett linje for verdiene i midten, noe som tyder på at poengsummene rundt forventningsverdien kan antas å være tilnærmet normalfordelte. Vi har imidlertid beregnet et relativt høyt variansnivå, $\sigma^2 = 15,9$, som innebærer at den tilhørende normalfordelingen vil ha stor spredning. Dette betyr at verdiene er ganske varierte, og at avvikene fra forventningsverdien på 12.24 poeng kan være store.
 
 

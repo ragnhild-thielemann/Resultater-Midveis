@@ -49,4 +49,4 @@ plt.xlabel("Reele verdier")
 plt.ylabel("z-prosentiler")
 plt.title("Q-Q-plot")
 plt.grid()
-
+plt.show()
