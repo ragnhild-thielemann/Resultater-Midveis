@@ -5,9 +5,9 @@ Resultatene fra Midtveiseksamen i STK1100 for 2026 har kommet, så jeg syntes de
 #### Behandle data
 Det første vi gjør, er å legge resultatene i en fil, slik at vi kan behandle dataen. Deretter leser vi ut resulatene, som legges i en array **a** . Deretter plotter vi dette i et histogram, først et histogram som beskriver den nomenielle fordelingen av antall studenter per poengsum, og deretter en sansynlighetsfordeling for de ulike poengsummene, gitt som figur 1 og figur 2. 
 
-![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/forventing.png)
+![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/nominell.png)
 
-![ja](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/nominell.png)
+![ja](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/sansynlighet.png)
 
 
 
@@ -18,7 +18,6 @@ Vi beregner den empiriske forveningsverdien ved å bruke utrykket for forvenings
 
 $$
 \mu_{empirisk} = \frac{1}{n} \sum_{i=1}^{n} x_{i} 
-
 $$ 
 
 
@@ -30,15 +29,20 @@ Når vi gjør dette for verdiene i listen, får vi at **Forventingsverdeien er 1
 
 Vi beregner variansen ved å bruke utrykket for varians
 
+
 $$
 \sigma_{empirisk}^2 = \frac{1}{n} \sum_{i=1}^{n} (x_{i} -\mu_{empirisk})^2
 $$ 
+
 
 **Dette gir en varians på 15.9** , som forteller oss at spredningen i resulatentene er veldig stor. 
 
 ##### Median
 
-Når vi skal finne medainen, finner vi antall elementer i listen over resulater, og printer a[$\frac{n}{2}$], som er den poengsummen der halvparten av studentene ligger over, mens halvparten av studentene ligger under. 
+Når vi skal finne medainen, finner vi antall elementer i listen over resulater, og printer a[ $\frac{n}{2}$ ], som er den poengsummen der halvparten av studentene ligger over, mens halvparten av studentene ligger under. Median er det samme som 0.5-prosentilen. 
+
+
+
 
 
 
