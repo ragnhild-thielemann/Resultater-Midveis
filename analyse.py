@@ -19,7 +19,7 @@ plt.ylabel("Antall studenter")
 varians = np.asarray([(x/17-forventing/17)**2 for x in MAT1105])
 print(np.sum(varians)/n)
 
-plt.hist(s,color = "hotpink", edgecolor = "black")
+plt.hist(s,color = "pink", edgecolor = "black")
 plt.title("Poengfordeling for MAT1105")
 plt.show()
 
@@ -68,34 +68,13 @@ print(f"Forventningen for STK1100 {(forventing/20):.2f} poeng for en student")
 varians = np.asarray([((x/20)-(forventing/20))**2 for x in a])
 print(f"Variansen er {(np.sum(varians)/n):.2f} for fordelingen av poeng")
 print("Statestikken er derfor negativt skjev")
-plt.hist(a,color = "pink",edgecolor = "black")
+plt.hist(a,color = "skyblue",edgecolor = "black")
 plt.xlabel("Antall poeng")
 plt.ylabel("Antall studenter")
-plt.title("Nominell fordeling av antall poeng per student")
+plt.title("Poengfordeling for STK1100")
 plt.show()
 
-plt.hist(a,color = "skyblue",edgecolor = "black",density= True)
-plt.xlabel("Antall poeng")
-plt.ylabel("Sansynlighet for poengsummen")
-plt.title("Sansynlighetsfordeling for poengsummene")
-plt.show()
 
-#q-q-plot
-
-p_verdier = []
-z_verdier = []
-for i in range(1,len(a)+1):
-    p = (i-0.5)/(len(a))
-    p_verdier.append(p)
-    z = norm.ppf(p)
-    z_verdier.append(z)
-
-plt.plot(a,z_verdier,".",color = "hotpink")
-plt.xlabel("Reele verdier")
-plt.ylabel("z-prosentiler")
-plt.title("Q-Q-plot")
-plt.grid()
-plt.show()
 
 
 # --- NORMALISER TIL PROSENT AV MAKS ---
@@ -111,9 +90,9 @@ q_mat1100 = np.percentile(mat1100_norm, p)
 q_stk1100 = np.percentile(stk1100_norm, p)
 
 # --- PLOT ---
-plt.plot(p, q_mat1105, label="MAT1105")
-plt.plot(p, q_mat1100, label="MAT1100")
-plt.plot(p, q_stk1100, label="STK1100")
+plt.plot(p, q_mat1105, label="MAT1105",color = "purple")
+#plt.plot(p, q_mat1100, label="MAT1100")
+plt.plot(p, q_stk1100, label="STK1100",color = "hotpink")
 
 plt.xlabel("Percentil")
 plt.ylabel("Andel av maks poeng")
@@ -121,3 +100,4 @@ plt.title("Sammenligning av fag (percentiler)")
 plt.legend()
 plt.grid()
 plt.show()
+
