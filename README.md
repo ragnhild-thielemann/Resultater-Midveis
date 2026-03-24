@@ -1,6 +1,6 @@
 # Resultater fra Midveis STK1100 - 2026
 
-Utgangspunktet for denne analysen er at på tbaneturen på vei hjem, var mange misfornøyde med midtveis i STK1100. Vi var av den oppfatning at den var vesetnlig vaskskligere enn andre midtveiseksamner, så jeg bestemte meg for å se på dataene, og se om dette stemmer. Jeg sammenligner resulatene fra midtveiseksamen i STK1100 fra 2026, MAT1100 fra 2026 og MAT1105 fra 2025.
+Utgangspunktet for denne analysen er at på tbaneturen på vei hjem, var mange misfornøyde med midtveis i STK1100. Vi var av den oppfatning at den var vesetnlig vaskskligere enn andre midtveiseksamner, så jeg bestemte meg for å se på dataene, og se om dette stemmer. Jeg sammenligner resulatene fra midtveiseksamen i STK1100 fra 2026, MAT1100 fra 2026 og MAT1105 fra 2025. Nederst i dokumentet kristiserer jeg også oppgave 11 (bursdagsoppgaven)
 
 ### Om de ulike emnene
 
@@ -90,10 +90,6 @@ Helt på toppen er forskjellen mindre, noe som viser at de beste studentene gjø
 
 ### Kritikken mot oppgave 11
 
-
-dette bedre
-
-Her er en mer presis og flytende versjon av teksten din:
 
 Oppgave 11 (bursdagsoppgaven) krevde at studentene selv brukte kunnskapen om at året har 365 dager for å finne alle nødvendige parametere før de kunne anvende Bayes’ formel for å beregne sannsynligheten for at bursdagen falt på solskinnsdagen.
 
