@@ -88,5 +88,19 @@ Helt på toppen er forskjellen mindre, noe som viser at de beste studentene gjø
 
 ![Modelering](https://github.com/ragnhild-thielemann/Resultater-Midveis/blob/main/images/fig4.png)
 
+### Kritikken mot oppgave 11
+
+
+dette bedre
+
+Her er en mer presis og flytende versjon av teksten din:
+
+Oppgave 11 (bursdagsoppgaven) krevde at studentene selv brukte kunnskapen om at året har 365 dager for å finne alle nødvendige parametere før de kunne anvende Bayes’ formel for å beregne sannsynligheten for at bursdagen falt på solskinnsdagen.
+
+Denne typen oppgave, der ikke alle parametere er eksplisitt oppgitt, står i kontrast til oppgave 10, som er svært presist formulert. Spørsmålet «Hva er ditt beste anslag på at fluktbilen er gul?» gjør det klart at studenten skal estimere sannsynligheten med Bayes’ formel, og det tas ikke hensyn til målefeil eller usikkerhet. Slike presiseringer mangler i oppgave 11 – for eksempel rundt skuddår – noe som gjør at oppgaven kan oppfattes som et lurespørsmål.
+
+På en ordinær eksamen ville bursdagsoppgaven vært en god oppgave, ettersom studentene da kan redegjøre for de forbeholdene de tar når enkelte parametere ikke er spesifisert i oppgaveteksten. På midtveiseksamen, derimot, kan den manglende spesifiseringen skape rom for tolkning. Det blir til en gjettekonkurranse om å tolke oppgaven på samme måte som foreleseren som har laget oppgavesettet, noe som er svært uheldig. Derfor bør oppgaven fjernes fra vektleggingen av poengene fra midtveis. 
+
+At en stor andel av  studentene har tolket oppgaveteksten rett er ikke et argument for å beholde oppgaven. 
 
 ### Peace out
